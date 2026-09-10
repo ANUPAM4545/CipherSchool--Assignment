@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getRepositoryContainer } from '@/infrastructure/db/index';
+import { getAppContainer } from '@/infrastructure/di/container';
 
 export async function GET(
   _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const repos = await getRepositoryContainer();
-    const attempt = await repos.attemptRepo.findById(params.id);
+    const container = await getAppContainer();
+    const attempt = await container.attemptRepo.findById(params.id);
 
     if (!attempt) {
       return NextResponse.json(

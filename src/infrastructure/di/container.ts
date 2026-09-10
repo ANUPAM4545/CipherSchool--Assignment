@@ -16,6 +16,8 @@ import {
   RetryAttemptUseCase,
 } from '../../application';
 
+import { IAttemptRepository } from '../../domain';
+
 export interface AppContainer {
   getProblems: GetProblemsUseCase;
   getProblem: GetProblemUseCase;
@@ -25,6 +27,7 @@ export interface AppContainer {
   getAttemptHistory: GetAttemptHistoryUseCase;
   retryAttempt: RetryAttemptUseCase;
   codeExecutionService: CodeExecutionService;
+  attemptRepo: IAttemptRepository;
 }
 
 let appContainerInstance: AppContainer | null = null;
@@ -63,6 +66,7 @@ export async function getAppContainer(): Promise<AppContainer> {
     getAttemptHistory: new GetAttemptHistoryUseCase(repos.attemptRepo),
     retryAttempt: new RetryAttemptUseCase(repos.attemptRepo),
     codeExecutionService,
+    attemptRepo: repos.attemptRepo,
   };
 
   appContainerInstance = container;
