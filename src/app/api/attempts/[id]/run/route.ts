@@ -11,7 +11,7 @@ export async function POST(
     const body = await request.json();
     const container = await getAppContainer();
 
-    const attempt = await container.startAttempt['attemptRepo'].findById(params.id);
+    const attempt = await container.attemptRepo.findById(params.id);
     if (!attempt) {
       return NextResponse.json({ success: false, error: `Attempt '${params.id}' not found` }, { status: 404 });
     }
