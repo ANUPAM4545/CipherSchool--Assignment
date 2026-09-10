@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAppContainer } from '@/infrastructure/di/container';
-import { EntityNotFoundError } from '@/domain/exceptions/DomainExceptions';
+import { EntityNotFoundError } from '@/domain';
 
 export async function GET(
   _request: NextRequest,

@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAppContainer } from '@/infrastructure/di/container';
-import { StructuredTextPayload } from '@/domain/payloads/StructuredTextPayload';
-import { CodeSubmissionPayload } from '@/domain/payloads/CodeSubmissionPayload';
-import { ValidationError, DomainError } from '@/domain/exceptions/DomainExceptions';
+import { StructuredTextPayload, CodeSubmissionPayload, ValidationError, DomainError } from '@/domain';
+
 
 export async function POST(
   request: NextRequest,

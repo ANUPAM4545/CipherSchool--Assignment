@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAppContainer } from '@/infrastructure/di/container';
-import { CodeSubmissionPayload } from '@/domain/payloads/CodeSubmissionPayload';
-import { ValidationError, DomainError } from '@/domain/exceptions/DomainExceptions';
+import { CodeSubmissionPayload, ValidationError, DomainError } from '@/domain';
+
 
 export async function POST(
   request: NextRequest,

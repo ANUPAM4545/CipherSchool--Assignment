@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAppContainer } from '@/infrastructure/di/container';
-import { DomainError } from '@/domain/exceptions/DomainExceptions';
+import { DomainError } from '@/domain';
 
 export async function POST(
   _request: NextRequest,

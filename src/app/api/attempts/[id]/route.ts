@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getRepositoryContainer } from '@/infrastructure/db';
+import { getRepositoryContainer } from '@/infrastructure/db/index';
 
 export async function GET(
   _request: NextRequest,
