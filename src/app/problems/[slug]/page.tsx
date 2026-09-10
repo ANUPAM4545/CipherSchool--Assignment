@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
-import { getAppContainer } from '@/infrastructure/di/container';
-import PracticeWorkspace from '@/components/PracticeWorkspace';
+import { getAppContainer } from '../../../infrastructure/di/container';
+import PracticeWorkspace from '../../../components/PracticeWorkspace';
 
 export const revalidate = 0; // Fresh fetch on every navigation
 

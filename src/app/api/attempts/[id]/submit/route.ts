@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAppContainer } from '@/infrastructure/di/container';
-import { StructuredTextPayload, CodeSubmissionPayload, ValidationError, DomainError } from '@/domain';
+import { getAppContainer } from '../../../../../infrastructure/di/container';
+import { StructuredTextPayload, CodeSubmissionPayload, ValidationError, DomainError } from '../../../../../domain/index';
 
 
 export async function POST(

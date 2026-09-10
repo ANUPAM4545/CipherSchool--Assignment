@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import NavigationWrapper from '@/components/NavigationWrapper';
-import FooterWrapper from '@/components/FooterWrapper';
+import NavigationWrapper from '../components/NavigationWrapper';
+import FooterWrapper from '../components/FooterWrapper';
 
 export const metadata: Metadata = {
   title: 'LLD Practice — Enterprise Low-Level System Design Platform',

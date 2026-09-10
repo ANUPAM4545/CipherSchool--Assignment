@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { getAppContainer } from '@/infrastructure/di/container';
-import InteractiveHeroPreview from '@/components/InteractiveHeroPreview';
-import TypewriterHeadline from '@/components/TypewriterHeadline';
+import { getAppContainer } from '../infrastructure/di/container';
+import InteractiveHeroPreview from '../components/InteractiveHeroPreview';
+import TypewriterHeadline from '../components/TypewriterHeadline';
 
 export const revalidate = 0; // Fresh fetch
 

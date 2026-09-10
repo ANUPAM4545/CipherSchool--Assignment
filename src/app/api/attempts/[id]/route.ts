@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAppContainer } from '@/infrastructure/di/container';
+import { getAppContainer } from '../../../../infrastructure/di/container';
 
 export async function GET(
   _request: NextRequest,
